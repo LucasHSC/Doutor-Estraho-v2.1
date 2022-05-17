@@ -51,7 +51,7 @@ body{
     background: linear-gradient(90deg, #000, #000E 30%, #000A 50%, #0000),url(../img/doutor_estranho.png);
     background-size: cover;
     background-repeat: no-repeat;
-    animation: zoom 1.5s;
+    /*animation: zoom 1.5s;*/
 }
 
 header{
@@ -102,7 +102,7 @@ span#doutor-estranho, #Wanda, #Wong{
     animation: neon 1.5s alternate infinite ease-in-out;
     display: none;
 }
-
+/*
 .personagem1-text img{
     animation: zoom2 1s;
 }
@@ -112,7 +112,7 @@ span#doutor-estranho, #Wanda, #Wong{
 .personagem3-text img{
     animation: zoom2 1s;
 }
-
+*/
 
 
 .text-container{
@@ -126,7 +126,9 @@ span#doutor-estranho, #Wanda, #Wong{
     Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
     font-size: 1.2rem;
     width: 305px;
-    animation: zoom2 1s;  
+    /*animation: zoom2 1s;*/  
+    transform: translate();
+    
 }
 
 .navbtn{
