@@ -114,7 +114,6 @@ span#doutor-estranho, #Wanda, #Wong{
 }
 */
 
-
 .text-container{
     display: flex;
     flex-direction: column;
@@ -127,7 +126,8 @@ span#doutor-estranho, #Wanda, #Wong{
     font-size: 1.2rem;
     width: 305px;
     /*animation: zoom2 1s;*/  
-    transform: translate();
+    transform: translate(50px);
+   
     
 }
 
