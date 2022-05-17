@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes zoom2 {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor--neon));
+    }
+    to {
+        filter: drop-shadow(0 0 30px var(--cor--neon));
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+:root{
+    --accent-color: #FF031A;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(90deg, #000, #000E 30%, #000A 50%, #0000),url(../img/doutor_estranho.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoom 1.5s;
+}
+
+header{
+    background-color: black;
+    border: 10px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+header, header > .container{
+    min-height: 64px;
+}
+
+header nav ul{
+    cursor: pointer;
+}
+
+.links-container a{
+    text-shadow: 2px 2px 2px #000;
+    padding: 8px 5px;
+    transition: all .5s;
+    text-decoration: none;
+    color: white;
+}
+
+.links-container a:hover{
+    background-color: var(--accent-color);
+}
+
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 234px;
+    align-items: center;
+}
+
+a{
+    flex-grow: 1;
+}
+
+span#doutor-estranho, #Wanda, #Wong{
+    background-color: #FF031A;
+    color: white;
+
+    animation: neon 1.5s alternate infinite ease-in-out;
+    display: none;
+}
+
+.personagem1-text img{
+    animation: zoom2 1s;
+}
+.personagem2-text img{
+    animation: zoom2 1s;
+}
+.personagem3-text img{
+    animation: zoom2 1s;
+}
+
+
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 10px;
+    height: 182px;
+    text-align: center;
+    gap: 13px;
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    font-size: 1.2rem;
+    width: 305px;
+    animation: zoom2 1s;  
+}
+
+.navbtn{
+    align-items: center;
+}
+
+.navbtn ul li input{
+    background-color: #000;
+    padding: 8px 5px;
+    transition: all .5s;
+    text-decoration: none;
+    color: white;
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    height: 170px;
+    display: block;
+}
+
+.navbtn ul li input:hover{
+    background-color: #FF031A;
+    color: #fff;
+    padding: 5px;
+    height: 170px;
+}
+
+.navbtn{
+    height: 560px;
+    width: 200px;
+}
+
+.navbtn ul li{
+    width: 200px;
+    align-items: center;
+    gap: 134px;
+}
+
+.personagem1-text{
+    height: 560px;
+    width: 305px;
+    transition: all 1s;
+    /*transition: transform 2.2s;  Animation zoom*/
+    /*transform: translateY(60px);
+    transform: scale(0.1);*/
+    display: none;
+    align-items: center;
+    background-color: var(--accent-color);
+     
+    --cor--neon: #FF031A; 
+    animation: zoom2 1s;
+    
+    
+}
+
+.personagem2-text{
+    height: 560px;
+    width: 305px;
+    transition: all 1s;
+    transition: transform 2.2s; /* Animation zoom*/
+    /*transform: translateY(60px);
+    transform: scale(0.1);*/
+    display: none;
+    align-items: center;
+    background-color: var(--accent-color);
+    animation: neon 1.5s alternate infinite ease-in-out ; 
+    --cor--neon: #FF031A;
+    transform: translateY(0) scale(1);
+}
+
+.personagem3-text{
+    height: 560px;
+    width: 305px;
+    transition: all 1s;
+    transition: transform 2.2s; /* Animation zoom*/
+    /*transform: translateY(60px);
+    transform: scale(0.1);*/
+    display: none; 
+    align-items: center;
+    background-color: var(--accent-color);
+    animation: neon 1.5s alternate infinite ease-in-out ; 
+    --cor--neon: #FF031A;   
+    transform: translateY(0) scale(1);
+}
+
+.text-container{
+    transform: translateY(0) scale(1);
+    transition: 1s;
+    background-color: var(--accent-color);
+}
+
+
+
+/*
+.personagem1-text :hover ~ .text-container{
+    transform: translateY(0) scale(1); 
+}
+.personagem2-text :hover ~ .text-container{
+    transform: translateY(0) scale(1);
+} 
+.personagem3-text :hover ~ .text-container{
+    transform: translateY(0) scale(1);
+}
+
+
+.personagem1-text:hover, .personagem2-text:hover, .personagem3-text:hover{
+    background-color: var(--accent-color);
+    animation: neon 1.5s alternate infinite ease-in-out ; 
+    --cor--neon: #FF031A;
+    transform: scale(1);
+}*/
+
+.descricao{
+    height: 200px;
+}
+
+@media (max-width: 768px){
+    main {
+        background-color: #0009;
+        background: linear-gradient(90deg, #000, #000E 30%, #000A 50%, #0000), url(../img/doutor_estranho.png);
+        background-repeat: no-repeat;
+        background-position: 80%;
+        background-size: cover;  
+    }
+}
+
+@media (max-width: 768px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*.personagem1-text:hover, .personagem2-text:hover, .personagem3-text:hover{
+        background-color: var(--accent-color);
+        animation: neon 1.5s alternate infinite ease-in-out ; 
+        --cor--neon: #FF031A;
+        transform: scale(1);
+    }*/
+    
+    .navbtn{
+        right: 100%;
+    }
+    
+}
+
+
+    
+

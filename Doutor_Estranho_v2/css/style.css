@@ -1,0 +1,139 @@
+:root{
+    --accent-color: #FF031A;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(90deg, #000, #000E 30%, #000A 50%, #0000),url(../img/doutor_estranho.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: zoom 1.5s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+header{
+    background-color: black;
+    border: 10px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+header, header > .container{
+    min-height: 64px;
+}
+
+header nav ul{
+    cursor: pointer;
+}
+
+.links-container a{
+    text-shadow: 2px 2px 2px #000;
+    padding: 8px 5px;
+    transition: all .5s;
+    text-decoration: none;
+    color: white;
+}
+
+.links-container a:hover{
+    background-color: var(--accent-color);
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+}
+
+.content-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;  
+    font-family: 'Mulish', sans-serif;
+}
+
+.content-container h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height:4.5rem;
+    color: white;
+    Font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}
+
+.movie-title{
+    font-size: 3.1rem;
+    color: var(--accent-color);
+    font-style: italic;
+    Font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}
+
+.movie-text{
+    font-weight: lighter;
+    width: 600px;
+    font-size: 1.2rem;
+    color: white;
+    Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+.content-container h1 span{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.button{
+    height: 80px;
+    width: 300px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px){
+    body {
+        background-color: #0009;
+        background-image: url(../img/doutor_estranho.png);
+        background-repeat: no-repeat;
+        background-blend-mode:darken;
+        background-position: 90%;
+        background-size: cover;
+    }
+}   
+
+@media (max-width:768px){
+    .movie-text{
+        display: none;
+    }
+    
+    .content-container{
+        gap: 40px;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    .content-container h1{
+        font-size: 4rem;
+        line-height: 2.5rem;
+    }
+    .movie-title{
+        font-size: 1.5rem;
+    }
+}
